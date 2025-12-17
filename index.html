@@ -22,13 +22,13 @@
                         <li><a class="link cool" href="video.html">BIOPOP VIDEO</a></li>
                     </ul>
                 </div>
-                <button class="cart-btn btn"><i class="ri-shopping-bag-line icon"></i></button>
+                <button id="cart-btn" class="cart-btn btn"><i class="ri-shopping-bag-line icon"></i></button>
             </div>
         </nav>
     </header>
 
     <!-- Main -->
-    <main>
+    <main id="main">
         <!-- Banner -->
         <section class="banner section">
             <div class="banner__block block flex-row">
@@ -68,13 +68,33 @@
             </div>
         </section>
 
+        <!-- Hidden Cart -->
+
+        <section id="carrito">
+            <div class="hidden_cart">
+                <button id="cartClose" class="btn__close">
+                    <i class="ri-close-large-line"></i>
+                </button>
+                <div id="cart" class="cart">
+                    <h4 class="body">your cart is empty</h4>
+                    <span class="body">Have an account?
+                        <a href="#">Log in</a> to check out faster.
+                    </span>
+                    <button class="btn__cart">
+                        <a class="btn__link" href="index.html">Continue shopping</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Banner Shade -->
         <section id="bannerShade" class="banner-shade">
             <div id="overlay"></div>
             <div class="shade-block block">
-                <a href="shop.html">
+                <button>
                     <img id="btn-heart" src="media/btn_img.png" alt="">
-                </a>            
+                    <img id="btn-broken" src="media/broken_btn.png" alt="">
+                </button>            
             </div>
         </section>
     </main>
