@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* keyframe para las animaciones */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /* Fonts */
+    --f-heading-lg: 600 clamp(1rem, 3vw, 3rem) "Google Sans Code", monospace;
+    --f-heading-md: 400 clamp(0.5rem, 1vw, 1rem) "Google Sans Code", monospace;
+    --f-heading-sm: 400 clamp(0.4rem, 1vw, 1rem) "Google Sans Code", monospace;
+    --f-heading-xs: 300 clamp(0.3rem, 1vw, 0.8rem) "Google Sans Code", monospace;
+
+    /* Sizes */
+    --s-xxl: 12.1875rem;
+    --s-xl: 5rem;
+    --s-lg: 4rem;
+    --s-md: 3rem;
+    --s-sm: 2rem;
+    --s-xs: 1.5rem;
+    --s-xxs: 1rem;
+
+    /* Min Width */
+    --mw-xl: 60rem;
+    --mw-lg: 48rem;
+    --mw-md: 30rem;
+    --mw-sm: 22.5rem;
+    --mw-xs: 15rem;
+
+    /* COLORES --c-main */
+}
+
+img { 
+    width: 100%;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+h1 {
+    color: #2d2d2d;
+    font: var(--f-heading-lg);
+}
+
+h4 {
+    color: #2d2d2d;
+    text-transform: capitalize;
+    font: var(--f-heading-md);
+}
+
+h5 {
+    color: #2d2d2d;
+    text-transform: capitalize;
+    font: var(--f-heading-xs);
+
+}
+
+p {
+    color: #474747;
+    font: var(--f-heading-xs);
+}
+
+/* COMPONENTES */
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 1rem;   
+}
+
+.section {
+    min-width: 80vw;
+    margin: auto;
+}
+
+.block {
+    padding:  2rem 3rem;
+    max-width: var(--mw-xl);
+    margin: auto;
+
+}
+
+.icon {
+    min-width: var(--s-sm);
+    color: black; 
+
+}
+
+.btn {
+    background: transparent;
+    border: transparent;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.body {
+    color: #474747;
+    font: var(--f-heading-xs);
+}
+
+.link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #2d2d2d;
+    font: var(--f-heading-xs);
+
+    &:hover {
+        opacity: 0.5;
+        text-decoration: underline;
+    }
+}
+
+/* Header */
+
+.menu {
+    min-width: 80vw;
+    margin: auto;
+    
+    & .menu__nav {
+        
+        & .menu__block {
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 1rem;
+
+            & .menu__container {
+                justify-content: center;
+                align-items: start;
+
+                & .logo {
+                    max-width: var(--s-xxl);
+
+                }
+
+                & .menu__list {
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+
+                    & li {
+                        & .cool {
+                            color: #e23232;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Main */
+    /* Banner */
+
+main {
+    & .banner {
+        & .banner__block {
+            justify-content: center;   
+            align-items: center;
+
+            gap: 6rem;
+
+            & .btn-switch {
+
+                & i {
+                    color: #2d2d2d;
+                    min-width: var(--s-sm);
+                    min-height: var(--s-sm);
+                    
+                }
+            }
+
+            & .product {
+                justify-content: center;
+                align-items: center;
+
+                & .image__container {
+                    min-width: var(--mw-sm);
+
+                }
+
+                & .product-content {
+                    justify-content: start;
+                    align-items: start;
+
+                    padding: 1rem;
+                    gap: 2rem;
+                    max-width: var(--mw-md);
+                    max-height: var(--mw-md);
+                    
+
+                    & .product-title {  /* porque no funciona el space-between?? */
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    & .product-description {
+                        justify-content: center;
+                        align-items: start;
+
+                        & .product-info {   
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                        }
+
+                    }
+                    & .product-sizes {
+                        align-items: center;
+                        justify-content: space-between;
+
+                        & .sizes {
+                            display: flex;
+                            flex-direction: row;
+
+                            gap: 1rem;
+
+                            & a {
+                                color: #8f8f8f;
+                                &:hover {
+                                    color: #2d2d2d;
+                                }
+                            }
+                            
+                        }
+
+                    
+                    }
+                }
+
+            }
+        }
+    }
+
+    /* Banner Shade */
+    & .banner-shade {
+        position: relative;
+
+        & #overlay {
+            width: 100%;
+            height: 100%;
+
+            background: #2d2d2d;
+            opacity: 0;
+            transition: 1s;
+
+            position: absolute;
+            z-index: 0;
+            
+        }
+        & .shade-block {
+            min-height: var(--mw-lg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & a {
+                z-index: 1;
+                & img {
+                    max-width: var(--mw-xs);
+                    
+                    &:hover {
+                        transform: scale(1.25);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+    
+
+
+
+
