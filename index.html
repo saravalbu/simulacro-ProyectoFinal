@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacro Proyecto Final</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css">
+    <script defer src="js/index.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="menu">
+        <nav class="menu__nav">
+            <div class="menu__block flex-row">
+                <div class="menu__container flex-column">
+                    <img class="logo" src="media/logo.png.png" alt="">
+                    <ul class="menu__list flex-row">
+                        <li><a class="link" href="shop.html">SHOP</a></li>
+                        <li><a class="link" href="art.html">ART</a></li>
+                        <li><a class="link cool" href="video.html">BIOPOP VIDEO</a></li>
+                    </ul>
+                </div>
+                <button class="cart-btn btn"><i class="ri-shopping-bag-line icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <section class="banner section">
+            <div class="banner__block block flex-row">
+                <button id="prev" class="btn btn-switch"><i class="ri-arrow-left-wide-line icon"></i></button>
+                <div class="product flex-row">
+                    <div class="image__container">
+                        <img id="image" src="media/speculum-cuff-2-8307746.jpg" alt="">
+                    </div>
+                    <div class="product-content flex-column">
+                        <div class="product-title flex-row">
+                            <h4>SPECULUM CUFF 1</h4>
+                            <h5 class="price">$2,250</h5>
+                        </div>
+                        <div class="product-description flex-column">
+                            <p>A narrow sterling-silver cuff with clean, curved edges and a mirrored finish. The form is inspired by the functional contours of a medical speculum</p>
+                            <span class="body">Each cuff is handmade to order</span>
+                            <div class="product-info">
+                                <span class="body"><b>Material:</b> 925 sterling silver</span>
+                                <span class="body"><b>Production time:</b> 4-6 weeks</span>
+                                <span class="body"><b>Sizes:</b> S / M / L / XL</span>
+                            </div>
+                            <span class="body">Designed by Bianca Censori</span>
+                        </div>
+                        <div class="product-sizes flex-row">
+                            <div class="sizes">
+                                <a class="link" href="#">S</a>
+                                <a class="link" href="#">M</a>
+                                <a class="link" href="#">L</a>
+                                <a class="link" href="#">XL</a>
+                                <a class="link" href="#">SIZE GUIDE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="next" class="btn btn-switch"><i class="ri-arrow-right-wide-line icon"></i></button>
+            </div>
+        </section>
+
+        <!-- Banner Shade -->
+        <section id="bannerShade" class="banner-shade">
+            <div id="overlay"></div>
+            <div class="shade-block block">
+                <a href="shop.html">
+                    <img id="btn-heart" src="media/btn_img.png" alt="">
+                </a>            
+            </div>
+        </section>
+    </main>
+</body>
+</html>
